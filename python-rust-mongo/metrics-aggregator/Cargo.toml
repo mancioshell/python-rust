@@ -1,0 +1,19 @@
+[package]
+name = "metrics-aggregator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "metrics_aggregator"
+crate-type = ["cdylib"]
+
+[dependencies]
+bson = { version = "2.11.0", features = ["chrono-0_4"] }
+futures = "0.3.30"
+mongodb = "2.8.2"
+pyo3 = { version = "0.21", features = ["extension-module"] }
+pyo3-asyncio-0-21 = { version = "0.21", features = ["attributes", "tokio-runtime", "unstable-streams"] }
+serde = "1.0.203"
+strum = "0.26.3"
+strum_macros = "0.26.4"

@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "python-rust-mongo/metrics-aggregator/Cargo.toml"
+    ]
+}

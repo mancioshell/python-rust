@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.6,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "metrics-aggregator"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[tool.poetry]
+name = "metrics-aggregator"
+version = "0.1.0"
+description = "A rust library which aggregates metrics from a time series database to a materialized view"
+
+[tool.poetry.dependencies]
+python = "^3.11.0"
